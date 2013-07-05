@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title><%=title %></title>
+    <script type="text/javascript" src="/lib/jquery-1.7.2.min.js?v=1.14521"></script>
+    <script type="text/javascript" src="/lib/sea.js?v=1.14521"></script>
+    <style>
+    video {
+        border:5px solid black;
+        width:480px;
+        height:360px;
+    }
+    button {
+        font: 18px sans-serif;
+        padding: 8px;
+    }
+    </style>
+</head>
+
+<body>
+<video id="vidLocal" autoplay="true"></video>
+<video id="vidRemote" autoplay="true"></video>
+<br>
+<button id="btnStart">Start</button>
+<button id="btnCall">Call</button>
+<button id="btnHangUp">Hang Up</button>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/project/webrtc/config.js?t=<%=t %>" data-init="multi-client"></script>
+</body>
+</html>
